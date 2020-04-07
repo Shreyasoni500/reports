@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.control.textlocal.reports.ReportsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.265 s <<< FAILURE! - in com.control.textlocal.reports.ReportsApplicationTests
+fetchOneRecord  Time elapsed: 0.343 s  <<< ERROR!
+org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.util.Date] to type [java.sql.Date]
+	at com.control.textlocal.reports.ReportsApplicationTests.fetchOneRecord(ReportsApplicationTests.java:32)
+
