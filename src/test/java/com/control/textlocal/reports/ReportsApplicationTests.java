@@ -25,13 +25,13 @@ class ReportsApplicationTests {
 		REPORT_LOGGER.info("****************This is my book***********");
 	}
 	
-	@Test
+	/*@Test
 	public void fetchSingleRecord() {
 		Pageable paging = PageRequest.of(1, 5);
         Page<Reports> pagedResult = reportingRepository.findAll(paging);
         List<Reports> listReport = pagedResult.toList();
         listReport.stream().forEach(result -> System.out.println(result));
-	}
+	}*/
 	
 	/*@Test
 	public void fetchOneRecord() {
