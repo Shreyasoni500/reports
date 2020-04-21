@@ -1,4 +1,4 @@
-package com.control.textlocal.reports.model;
+package com.control.textlocal.reports.dto;
 
 
 

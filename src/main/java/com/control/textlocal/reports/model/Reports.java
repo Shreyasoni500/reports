@@ -3,93 +3,61 @@ package com.control.textlocal.reports.model;
 
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
 
+import org.springframework.data.annotation.Id;
 /* 
  * @author srani
  * This is generic fields which will be used by all type of messages.
  * */
-@Document("Reports")
+@Entity
+@Table(name = "EMPLOYEE_DOCUMENTS")
 public class Reports {
-	/* 
-	 * Unique id for User
-	 * */
-	//private int userId;
-	/* 
-	 * Id of each sent
-	 * */
-	//private int sentId;
-	/*
-	 * Individual id for group
-	 * */
-	//private int groupId;
-	
-	/*private String firstName;
-	private String lastName;
-	private String custom1;
-	private String custom2;
-	private String custom3;*/
-	/* 
-	 * All the information related to particular page
-	 * */
-	//private PageInfo info;
-	/* 
-	 * Current timestamp
-	 * */
-	//private Date systemDate;
-	/* 
-	 * Phone number of user
-	 * */
-	//private int msisdn;
-	/* 
-	 * Text message
-	 * */
-	//private String message;
-	/* 
-	 * Status of sent message
-	 * */
-	//private String status;
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String id;
 	private String sender;
-	private Long msisdn;
+	private long msisdn;
+	private String firstname;
+	private String lastname;
+	private String custom1;
+	private String custom2;
+	private String custom3;
 	private String message;
-	private Integer status;
-	private Integer userId;
-	private Integer scheduleTime;
-	private Integer sentId;
-	private Integer batchId;
-	private Integer receiptStatus;
-	private Integer sequence;
-	private Integer messageId;
-	private Integer priority;
-	private Integer validity;
+	private int status;
+	private int userId;
+	private int scheduleTime;
+	private int sentId;
+	private int batchId;
+	private int receiptStatus;
+	private int sequence;
+	private int messageId;
+	private int priority;
+	private int validity;
 	private String error;
 	private Date timestamp;
-	private Integer rx_applied;
-	private Boolean country;
+	private boolean country;
 	private Date senttime;
 	private Date receiptedtime;
-	private Boolean moving;
-	private Integer sendgateway;
-	private Integer receiptgateway;
-	private Integer categoryId;
-	private String primaryRoute;
-	private String secondaryRoute;
-	private Integer Icr;
+	private boolean moving;
+	private int sendgateway;
+	private int receiptgateway;
+	private int categoryId;
 	private String schannel;
 	private String destination;
-	private Integer messageLength;
+	private int messageLength;
 	private String products;
-	private Double costRate;
-	private Double purchaseRate;
-	private Double creditsUsed;
-	private Integer ngmpRoutingType;
-	private Integer ngmpClientAppid;
-	private Integer ngmpClientId;
-	private Double creditsOnAccount;
-	private Integer nodrvalidity;
+	private double costRate;
+	private double purchaseRate;
+	private double creditsUsed;
+	private double creditsOnAccount;
+	private int nodrvalidity;
+	private int err_code;
+	private String gw_receiptObject;
+	private Date systemDate;
 	
 	public String getId() {
 		return id;
@@ -103,11 +71,41 @@ public class Reports {
 	public void setSender(String sender) {
 		this.sender = sender;
 	}
-	public Long getMsisdn() {
+	public long getMsisdn() {
 		return msisdn;
 	}
-	public void setMsisdn(Long msisdn) {
+	public void setMsisdn(long msisdn) {
 		this.msisdn = msisdn;
+	}
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getCustom1() {
+		return custom1;
+	}
+	public void setCustom1(String custom1) {
+		this.custom1 = custom1;
+	}
+	public String getCustom2() {
+		return custom2;
+	}
+	public void setCustom2(String custom2) {
+		this.custom2 = custom2;
+	}
+	public String getCustom3() {
+		return custom3;
+	}
+	public void setCustom3(String custom3) {
+		this.custom3 = custom3;
 	}
 	public String getMessage() {
 		return message;
@@ -115,64 +113,64 @@ public class Reports {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public Integer getStatus() {
+	public int getStatus() {
 		return status;
 	}
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
-	public Integer getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public Integer getScheduleTime() {
+	public int getScheduleTime() {
 		return scheduleTime;
 	}
-	public void setScheduleTime(Integer scheduleTime) {
+	public void setScheduleTime(int scheduleTime) {
 		this.scheduleTime = scheduleTime;
 	}
-	public Integer getSentId() {
+	public int getSentId() {
 		return sentId;
 	}
-	public void setSentId(Integer sentId) {
+	public void setSentId(int sentId) {
 		this.sentId = sentId;
 	}
-	public Integer getBatchId() {
+	public int getBatchId() {
 		return batchId;
 	}
-	public void setBatchId(Integer batchId) {
+	public void setBatchId(int batchId) {
 		this.batchId = batchId;
 	}
-	public Integer getReceiptStatus() {
+	public int getReceiptStatus() {
 		return receiptStatus;
 	}
-	public void setReceiptStatus(Integer receiptStatus) {
+	public void setReceiptStatus(int receiptStatus) {
 		this.receiptStatus = receiptStatus;
 	}
-	public Integer getSequence() {
+	public int getSequence() {
 		return sequence;
 	}
-	public void setSequence(Integer sequence) {
+	public void setSequence(int sequence) {
 		this.sequence = sequence;
 	}
-	public Integer getMessageId() {
+	public int getMessageId() {
 		return messageId;
 	}
-	public void setMessageId(Integer messageId) {
+	public void setMessageId(int messageId) {
 		this.messageId = messageId;
 	}
-	public Integer getPriority() {
+	public int getPriority() {
 		return priority;
 	}
-	public void setPriority(Integer priority) {
+	public void setPriority(int priority) {
 		this.priority = priority;
 	}
-	public Integer getValidity() {
+	public int getValidity() {
 		return validity;
 	}
-	public void setValidity(Integer validity) {
+	public void setValidity(int validity) {
 		this.validity = validity;
 	}
 	public String getError() {
@@ -187,16 +185,10 @@ public class Reports {
 	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
-	public Integer getRx_applied() {
-		return rx_applied;
-	}
-	public void setRx_applied(Integer rx_applied) {
-		this.rx_applied = rx_applied;
-	}
-	public Boolean getCountry() {
+	public boolean isCountry() {
 		return country;
 	}
-	public void setCountry(Boolean country) {
+	public void setCountry(boolean country) {
 		this.country = country;
 	}
 	public Date getSenttime() {
@@ -211,47 +203,29 @@ public class Reports {
 	public void setReceiptedtime(Date receiptedtime) {
 		this.receiptedtime = receiptedtime;
 	}
-	public Boolean getMoving() {
+	public boolean isMoving() {
 		return moving;
 	}
-	public void setMoving(Boolean moving) {
+	public void setMoving(boolean moving) {
 		this.moving = moving;
 	}
-	public Integer getSendgateway() {
+	public int getSendgateway() {
 		return sendgateway;
 	}
-	public void setSendgateway(Integer sendgateway) {
+	public void setSendgateway(int sendgateway) {
 		this.sendgateway = sendgateway;
 	}
-	public Integer getReceiptgateway() {
+	public int getReceiptgateway() {
 		return receiptgateway;
 	}
-	public void setReceiptgateway(Integer receiptgateway) {
+	public void setReceiptgateway(int receiptgateway) {
 		this.receiptgateway = receiptgateway;
 	}
-	public Integer getCategoryId() {
+	public int getCategoryId() {
 		return categoryId;
 	}
-	public void setCategoryId(Integer categoryId) {
+	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
-	}
-	public String getPrimaryRoute() {
-		return primaryRoute;
-	}
-	public void setPrimaryRoute(String primaryRoute) {
-		this.primaryRoute = primaryRoute;
-	}
-	public String getSecondaryRoute() {
-		return secondaryRoute;
-	}
-	public void setSecondaryRoute(String secondaryRoute) {
-		this.secondaryRoute = secondaryRoute;
-	}
-	public Integer getIcr() {
-		return Icr;
-	}
-	public void setIcr(Integer icr) {
-		Icr = icr;
 	}
 	public String getSchannel() {
 		return schannel;
@@ -265,10 +239,10 @@ public class Reports {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public Integer getMessageLength() {
+	public int getMessageLength() {
 		return messageLength;
 	}
-	public void setMessageLength(Integer messageLength) {
+	public void setMessageLength(int messageLength) {
 		this.messageLength = messageLength;
 	}
 	public String getProducts() {
@@ -277,69 +251,68 @@ public class Reports {
 	public void setProducts(String products) {
 		this.products = products;
 	}
-	public Double getCostRate() {
+	public double getCostRate() {
 		return costRate;
 	}
-	public void setCostRate(Double costRate) {
+	public void setCostRate(double costRate) {
 		this.costRate = costRate;
 	}
-	public Double getPurchaseRate() {
+	public double getPurchaseRate() {
 		return purchaseRate;
 	}
-	public void setPurchaseRate(Double purchaseRate) {
+	public void setPurchaseRate(double purchaseRate) {
 		this.purchaseRate = purchaseRate;
 	}
-	public Double getCreditsUsed() {
+	public double getCreditsUsed() {
 		return creditsUsed;
 	}
-	public void setCreditsUsed(Double creditsUsed) {
+	public void setCreditsUsed(double creditsUsed) {
 		this.creditsUsed = creditsUsed;
 	}
-	public Integer getNgmpRoutingType() {
-		return ngmpRoutingType;
-	}
-	public void setNgmpRoutingType(Integer ngmpRoutingType) {
-		this.ngmpRoutingType = ngmpRoutingType;
-	}
-	public Integer getNgmpClientAppid() {
-		return ngmpClientAppid;
-	}
-	public void setNgmpClientAppid(Integer ngmpClientAppid) {
-		this.ngmpClientAppid = ngmpClientAppid;
-	}
-	public Integer getNgmpClientId() {
-		return ngmpClientId;
-	}
-	public void setNgmpClientId(Integer ngmpClientId) {
-		this.ngmpClientId = ngmpClientId;
-	}
-	public Double getCreditsOnAccount() {
+	public double getCreditsOnAccount() {
 		return creditsOnAccount;
 	}
-	public void setCreditsOnAccount(Double creditsOnAccount) {
+	public void setCreditsOnAccount(double creditsOnAccount) {
 		this.creditsOnAccount = creditsOnAccount;
 	}
-	public Integer getNodrvalidity() {
+	public int getNodrvalidity() {
 		return nodrvalidity;
 	}
-	public void setNodrvalidity(Integer nodrvalidity) {
+	public void setNodrvalidity(int nodrvalidity) {
 		this.nodrvalidity = nodrvalidity;
+	}
+	public int getErr_code() {
+		return err_code;
+	}
+	public void setErr_code(int err_code) {
+		this.err_code = err_code;
+	}
+	public String getGw_receiptObject() {
+		return gw_receiptObject;
+	}
+	public void setGw_receiptObject(String gw_receiptObject) {
+		this.gw_receiptObject = gw_receiptObject;
+	}
+	public Date getSystemDate() {
+		return systemDate;
+	}
+	public void setSystemDate(Date systemDate) {
+		this.systemDate = systemDate;
 	}
 	@Override
 	public String toString() {
-		return "Reports [id=" + id + ", sender=" + sender + ", msisdn=" + msisdn + ", message="
-				+ message + ", status=" + status + ", userId=" + userId + ", scheduleTime=" + scheduleTime + ", sentId="
-				+ sentId + ", batchId=" + batchId + ", receiptStatus=" + receiptStatus + ", sequence=" + sequence
-				+ ", messageId=" + messageId + ", priority=" + priority + ", validity=" + validity + ", error=" + error
-				+ ", timestamp=" + timestamp + ", rx_applied=" + rx_applied + ", country=" + country + ", senttime="
+		return "Reports [id=" + id + ", sender=" + sender + ", msisdn=" + msisdn + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", custom1=" + custom1 + ", custom2=" + custom2 + ", custom3=" + custom3
+				+ ", message=" + message + ", status=" + status + ", userId=" + userId + ", scheduleTime="
+				+ scheduleTime + ", sentId=" + sentId + ", batchId=" + batchId + ", receiptStatus=" + receiptStatus
+				+ ", sequence=" + sequence + ", messageId=" + messageId + ", priority=" + priority + ", validity="
+				+ validity + ", error=" + error + ", timestamp=" + timestamp + ", country=" + country + ", senttime="
 				+ senttime + ", receiptedtime=" + receiptedtime + ", moving=" + moving + ", sendgateway=" + sendgateway
-				+ ", receiptgateway=" + receiptgateway + ", categoryId=" + categoryId + ", primaryRoute=" + primaryRoute
-				+ ", secondaryRoute=" + secondaryRoute + ", Icr=" + Icr + ", schannel=" + schannel + ", destination="
-				+ destination + ", messageLength=" + messageLength + ", products=" + products + ", costRate=" + costRate
-				+ ", purchaseRate=" + purchaseRate + ", creditsUsed=" + creditsUsed + ", ngmpRoutingType="
-				+ ngmpRoutingType + ", ngmpClientAppid=" + ngmpClientAppid + ", ngmpClientId=" + ngmpClientId
-				+ ", creditsOnAccount=" + creditsOnAccount + ", nodrvalidity=" + nodrvalidity + "]";
+				+ ", receiptgateway=" + receiptgateway + ", categoryId=" + categoryId + ", schannel=" + schannel
+				+ ", destination=" + destination + ", messageLength=" + messageLength + ", products=" + products
+				+ ", costRate=" + costRate + ", purchaseRate=" + purchaseRate + ", creditsUsed=" + creditsUsed
+				+ ", creditsOnAccount=" + creditsOnAccount + ", nodrvalidity=" + nodrvalidity + ", err_code=" + err_code
+				+ ", gw_receiptObject=" + gw_receiptObject + ", systemDate=" + systemDate + "]";
 	}
-	
 	
 }

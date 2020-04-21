@@ -8,18 +8,17 @@ public class PageInfo {
 	/*
 	 * current page no
 	 * */
-	//private int currentPage;
+	private int currentPage;
 	/*
 	 * current page size
 	 * */
-	//private int pageSize;
+	private int pageSize;
 	/*
 	 * total number of pages
 	 * */
-	//private int totalPages;
+	private int totalPages;
 	/*
 	 * total number of records
 	 * */
-	//private int totalRecords;
-	
+	private int totalRecords;
 }
