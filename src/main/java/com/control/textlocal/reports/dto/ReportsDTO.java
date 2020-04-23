@@ -1,7 +1,5 @@
 package com.control.textlocal.reports.dto;
 
-import java.util.Date;
-
 import com.control.textlocal.reports.model.Filter;
 import com.control.textlocal.reports.model.OrderBy;
 import com.control.textlocal.reports.model.PageInfo;

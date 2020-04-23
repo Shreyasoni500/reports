@@ -1,7 +1,8 @@
 package com.control.textlocal.reports.model;
 
 public class MessageHistory {
-	
+	private int userId;
+	private int sentId;
 }
 
 /*$sortby = 'date',

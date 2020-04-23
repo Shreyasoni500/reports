@@ -8,4 +8,5 @@ public class APIDTO {
 	private String sentId;
 	private PageInfo info;
 	
+	
 }

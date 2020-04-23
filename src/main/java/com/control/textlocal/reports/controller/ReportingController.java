@@ -38,11 +38,15 @@ public class ReportingController {
 	public List<APIDTO> fetchAPIReports(@RequestBody ReportsDTO reportsDTO) {
 		List<APIDTO> listAPIObj = null;
 		try {
+			
 			listAPIObj = reportingDataService.fetchListAPIDTO(reportsDTO);
 		} catch(Exception e) {
 			REPORT_LOGGER.info("Error in fetching API reports data",e);
 		}		
 		return listAPIObj;
+		
+	}
+	public List<APIDTO> fetchAPIReports(@RequestBody ReportsDTO reportsDTO) {
 		
 	}
 	
